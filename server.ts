@@ -1,3 +1,4 @@
+import mongoose, { ConnectOptions } from "mongoose";
 import APP from "./app";
 
 const port = process.env.SERVER_PORT || 4000 as any;
@@ -24,8 +25,6 @@ function logRoutes(stack: any, parentPath = '') {
         }
     });
 }
-
-
 APP.listen(port, host, () => {
     console.log(`Server gateway is running at http://${host}:${port}`);
     // Log out all routes
